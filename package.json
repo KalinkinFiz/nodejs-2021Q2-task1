@@ -1,11 +1,11 @@
 {
   "name": "nodejs-2021q2-task1",
   "version": "1.0.0",
-  "description": "Caesar cipher CLI tool",
+  "description": "",
   "main": "caesar.js",
   "dependencies": {
-    "commander": "^7.2.0",
-    "nodemon": "^2.0.7"
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -17,6 +17,9 @@
   },
   "author": "kalinkin.fiz",
   "license": "ISC",
+  "bin": {
+    "cli": "./caesar.js"
+  },
   "bugs": {
     "url": "https://github.com/KalinkinFiz/nodejs-2021Q2-task1/issues"
   },
