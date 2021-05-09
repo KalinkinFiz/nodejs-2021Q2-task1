@@ -18,7 +18,7 @@ const actions = async _ => {
         process.stderr.write(`Value of shift must be positive integer, but "${shift}" accepted!\n`);
         process.exit(1);
     }
-    if (!valid.isIn(action, ['encode','decode'])) {
+    if (action !== 'decode' && action !== 'encode') {
         process.stderr.write(`Action must be "encode" or "decode"\n`);
         process.exit(1);
     }
