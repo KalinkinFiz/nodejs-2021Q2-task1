@@ -26,17 +26,17 @@ CLI tool accept 4 options (short alias and full name):
 Encode input.txt to output.txt with shift 7:
 
 ```
-$ cli -s 7 -i "./input.txt" -o "./output.txt" -a encode
+$ node caesar.js -s 7 -i "./input.txt" -o "./output.txt" -a encode
 ```
 
 Decode input.txt to output.txt with shift 7:
 
 ```
-$ cli  --shift 7 --input input.txt --output output.txt --action decode
+$ node caesar.js  --shift 7 --input input.txt --output output.txt --action decode
 ```
 
 Decode stdin to stdout with shift 7:
 
 ```
-$ cli --action decode --shift 7
+$ node caesar.js --action decode --shift 7
 ```
