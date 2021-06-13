@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-2021q2-task1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caesar.js",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KalinkinFiz/nodejs-2021Q2-task1.git"
+  },
+  "author": "kalinkin.fiz",
+  "license": "ISC",
+  "bin": {
+    "cli": "./caesar.js"
+  },
+  "bugs": {
+    "url": "https://github.com/KalinkinFiz/nodejs-2021Q2-task1/issues"
+  },
+  "homepage": "https://github.com/KalinkinFiz/nodejs-2021Q2-task1#readme"
+}
