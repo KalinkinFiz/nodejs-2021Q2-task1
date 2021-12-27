@@ -1,6 +1,7 @@
 const { Transform } = require('stream');
 
-const { caesarCipher } = require('./code');
+//const { caesarCipher } = require('./code');
+const { dashatize } = require('./variant_eight/t_ask1');
 
 class CaesarTransform extends Transform {
   constructor(shift, action) {
@@ -13,11 +14,11 @@ class CaesarTransform extends Transform {
     let result = '';
 
     switch (this.action) {
-      case 'encode':
-        result = caesarCipher(chunk.toString('utf8'), this.shift);
+      case 'dashatize':
+        result = dashatize(chunk.toString('utf8'));
         break;
-      case 'decode':
-        result = caesarCipher(chunk.toString('utf8'), -this.shift);
+      case 'strictEqual':
+        result = dashatize(chunk.toString('utf8'));
         break;
       default:
         process.stderr.write(' Erorr: Action not found\n');

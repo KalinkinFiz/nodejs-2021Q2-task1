@@ -18,8 +18,8 @@ const actions = async _ => {
         process.stderr.write(`Value of shift must be positive integer, but "${shift}" accepted!\n`);
         process.exit(1);
     }
-    if (action !== 'decode' && action !== 'encode') {
-        process.stderr.write(`Action must be "encode" or "decode"\n`);
+    if (action !== 'dashatize' && action !== 'strictEqual') {
+        process.stderr.write(`Action must be "dashatize" or "strictEqual"\n`);
         process.exit(1);
     }
 
