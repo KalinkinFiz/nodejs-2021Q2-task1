@@ -18,12 +18,12 @@ const actions = async _ => {
         process.stderr.write(`Value of shift must be positive integer, but "${shift}" accepted!\n`);
         process.exit(1);
     }
-    if (action !== 'decode' && action !== 'encode') {
-        process.stderr.write(`Action must be "encode" or "decode"\n`);
+    if (action !== 'decode' && action !== 'formulaAsString') {
+        process.stderr.write(`Action must be "formulaAsString" or "decode"\n`);
         process.exit(1);
     }
 
-    valid.isEmpty(input) && process.stdout.write('Enter the text and press ENTER to encode/decode | press CTRL + C to exit: ')
+    valid.isEmpty(input) && process.stdout.write('Enter the text and press ENTER to formulaAsString/decode | press CTRL + C to exit: ')
 
     const ReadableStream = !valid.isEmpty(input) ? fs.createReadStream(input) : process.stdin;
     const WriteableStream = !valid.isEmpty(output) ? fs.createWriteStream((output), { flags: 'a' }) : process.stdout;
@@ -47,7 +47,7 @@ process.on('SIGINT', _ => { process.exit(0); });
 
 program
   .requiredOption('-s, --shift <num>', 'A shift')
-  .requiredOption('-a --action <action>', 'An action encode/decode')
+  .requiredOption('-a --action <action>', 'An action formulaAsString/decode')
   .option('-i, --input <filename>', 'An input file')
   .option('-o --output <filename>', 'An output file')
   .action(actions)

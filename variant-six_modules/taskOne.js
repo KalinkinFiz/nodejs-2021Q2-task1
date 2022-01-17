@@ -29,7 +29,7 @@ module.exports.formulaAsString = function formulaAsString(str, shift) {
     let n = parseInt(str);
     let coefficient;
     let k = 0, a, b, c;
-    let formula;
+    let formula = '';
 
  while ( n >= k) {
     // Calculation of binomial coefficients.

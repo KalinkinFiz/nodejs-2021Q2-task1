@@ -1,6 +1,7 @@
 const { Transform } = require('stream');
 
 const { caesarCipher } = require('./code');
+const { formulaAsString } = require('./taskOne');
 
 class CaesarTransform extends Transform {
   constructor(shift, action) {
@@ -13,8 +14,8 @@ class CaesarTransform extends Transform {
     let result = '';
 
     switch (this.action) {
-      case 'encode':
-        result = caesarCipher(chunk.toString('utf8'), this.shift);
+      case 'formulaAsString':
+        result = formulaAsString(this.shift);
         break;
       case 'decode':
         result = caesarCipher(chunk.toString('utf8'), -this.shift);
@@ -24,7 +25,7 @@ class CaesarTransform extends Transform {
         process.exit(1);
     }
 
-    this.push(result);
+    this.push(result + '\n');
     done();
   }
 }
