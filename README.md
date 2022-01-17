@@ -1,42 +1,40 @@
-## Caesar cipher CLI tool
+## Node.js basics. variant eight CLI tool (CMD tool)
 
-## Run app
-
-```
-$ git clone https://github.com/KalinkinFiz/nodejs-2021Q2-task1.git
-```
+### Downloading and installing NPM modules
 
 ```
-$ cd nodejs-2021Q2-task1
+$ git clone https://github.com/zxcdead1nside/nodejs-2021Q2-task1.git
+```
+
+```
+$ cd -cli-tool
 ```
 
 ```
 $ npm i
 ```
 
+### (optional) Installing the application as an NPM module
+
+```
+$ [sudo] npm i -g ./
+```
+
 ### Usage example:
 
-CLI tool accept 4 options (short alias and full name):
+CLI tool accept 2 options:
 
 1.  -s, --shift: a shift
-2.  -i, --input: an input file
-3.  -o, --output: an output file
-4.  -a, --action: an action encode/decode
+2.  -a, --action: an action dashatize/strictEqual
 
-Encode input.txt to output.txt with shift 7:
+Return a string with a hyphen under a certain condition:
 
 ```
-$ node caesar.js -s 7 -i "./input.txt" -o "./output.txt" -a encode
+$ [node] cmd -s 274 -a dashatize
 ```
 
-Decode input.txt to output.txt with shift 7:
+Inversion of an array:
 
-```
-$ node caesar.js  --shift 7 --input input.txt --output output.txt --action decode
-```
-
-Decode stdin to stdout with shift 7:
-
-```
-$ node caesar.js --action decode --shift 7
+``` 
+$ [node] cmd -s '[6, 5, 4, 3, 2, 1]' -a strictEqual
 ```
