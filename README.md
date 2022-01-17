@@ -1,9 +1,9 @@
-## Caesar cipher CLI tool
+## Node.js basics. Variant six CLI tool (CMD tool)
 
 ## Run app
 
 ```
-$ git clone https://github.com/KalinkinFiz/nodejs-2021Q2-task1.git
+$ git clone https://github.com/AndreyPrishivalko/nodejs-2021Q2-task1.git
 ```
 
 ```
