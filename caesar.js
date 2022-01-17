@@ -6,8 +6,8 @@ const util = require('util');
 const chalk = require('chalk');
 const program = require('commander');
 
-const valid = require('./module/valid');
-const CaesarTransform = require('./module/transform');
+const valid = require('./variant-six_modules/valid');
+const CaesarTransform = require('./variant-six_modules/transform');
 
 const pipeline = util.promisify(stream.pipeline);
 
