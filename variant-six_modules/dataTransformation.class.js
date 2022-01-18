@@ -1,9 +1,9 @@
 const { Transform } = require('stream');
 
-const { caesarCipher } = require('./code');
 const { formulaAsString } = require('./taskOne');
+const { minimumNumber } = require('./taskTwo');
 
-class CaesarTransform extends Transform {
+class DataTransformation extends Transform {
   constructor(shift, action) {
     super();
     this.shift = shift;
@@ -15,10 +15,13 @@ class CaesarTransform extends Transform {
 
     switch (this.action) {
       case 'formulaAsString':
-        result = formulaAsString(this.shift);
+        let integer = parseInt(this.shift);
+        result = formulaAsString(integer);
         break;
-      case 'decode':
-        result = caesarCipher(chunk.toString('utf8'), -this.shift);
+      case 'minimumNumber':
+        // Parsing a json encoded array.
+        let arr = JSON.parse(chunk.toString('utf8'), this.shift);
+        result = minimumNumber(arr);
         break;
       default:
         process.stderr.write(' Erorr: Action not found\n');
@@ -30,4 +33,4 @@ class CaesarTransform extends Transform {
   }
 }
 
-module.exports = CaesarTransform;
+module.exports = DataTransformation;

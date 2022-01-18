@@ -33,3 +33,74 @@
 //minimumNumber([50,39,49,6,17,28])
 // -> 2
 
+// Решение:
+
+let MAX = 100005;
+  
+// Array to store primes
+let isPrime = new Array(MAX).fill(0);
+  
+// function to calculate primes 
+// using sieve of eratosthenes
+function sieveOfEratostheneses() {
+    isPrime[1] = true;
+    for (let i = 2; i * i < MAX; i++) {
+        if (!isPrime[i]) {
+            for (let j = 2 * i; j < MAX; j += i) {
+                isPrime[j] = true;
+            }
+                
+        }
+    }
+}
+  
+// Find prime number greater 
+// than a number
+function findPrime(n) {
+    let num = n + 1;
+  
+    // To return prime number
+    // greater than n
+    while (num > 0) {
+        // check if num is prime
+        if (!isPrime[num])
+            return num;
+  
+        // increment num
+        num = num + 1;
+    }
+
+    return 0;
+}
+  
+// To find number to be added 
+// so sum of array is prime
+module.exports.minimumNumber = function minimumNumber(arr, shift) { 
+    let n = arr.length;
+
+    // call sieveOfEratostheneses
+    // to calculate primes
+    sieveOfEratostheneses();
+  
+    let sum = 0;
+  
+    // To find sum of array elements
+    for (let i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+         
+    if (!isPrime[sum]) {
+        return 0;
+    }
+       
+  
+    // To find prime number
+    // greater then sum
+    let num = findPrime(sum);
+  
+    // Return difference of 
+    // sum and num
+    let difference = num - sum;
+
+    return difference;
+}

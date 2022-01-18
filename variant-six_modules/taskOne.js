@@ -25,8 +25,12 @@
 // -> "a^5+5a^4b+10a^3b^2+10a^2b^3+5ab^4+b^5"
 
 // Решение:
-module.exports.formulaAsString = function formulaAsString(str, shift) { 
-    let n = parseInt(str);
+module.exports.formulaAsString = function formulaAsString(n) {
+
+    if (n == 0) {
+        return 1;
+    }
+
     let coefficient;
     let k = 0, a, b, c;
     let formula = '';
@@ -70,7 +74,7 @@ module.exports.formulaAsString = function formulaAsString(str, shift) {
    }
  }
 
- return formula;
+    return formula;
 } 
 
 function factorial(n) {
