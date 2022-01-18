@@ -57,5 +57,5 @@ $ [node] cmd  -s '[50, 39, 49, 6, 17, 28]' -i input.txt -o output.txt -a minimum
 # An example of the minimumNumber function that takes a json encoded array from the console until the user presses CTRL+C to exit: '[3,1,2]':
 
 ```
-$ node cmd --action minimumNumber --shift '[3,1,2]'
+$ [node] cmd --action minimumNumber --shift '[3,1,2]'
 ```
