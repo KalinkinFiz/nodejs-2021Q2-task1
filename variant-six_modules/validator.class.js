@@ -1,5 +1,5 @@
-class valid {
-    static isNumber(value) {
+class Validator {
+    static isInteger(value) {
         return (value ^ 0) === value;
     }
 
@@ -20,4 +20,4 @@ class valid {
     }
 }
 
-module.exports = valid;
+module.exports = Validator;
