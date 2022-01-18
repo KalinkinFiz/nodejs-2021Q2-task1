@@ -31,6 +31,12 @@ module.exports.formulaAsString = function formulaAsString(n) {
         return 1;
     }
 
+    let wasNumberNegative = false;
+    if (n < 0) {
+        n *= -1;
+        wasNumberNegative = true;
+    }
+
     let coefficient;
     let k = 0, a, b, c;
     let formula = '';
@@ -73,6 +79,10 @@ module.exports.formulaAsString = function formulaAsString(n) {
        formula += '+';
    }
  }
+    
+    if (wasNumberNegative == true) {
+        formula = `1/(${formula})`;
+    }
 
     return formula;
 } 
