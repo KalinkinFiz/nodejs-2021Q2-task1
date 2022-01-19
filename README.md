@@ -1,42 +1,43 @@
-## Caesar cipher CLI tool
+# Basic-nodejs-mitso
 
-## Run app
+## Prerequisites
 
-```
-$ git clone https://github.com/KalinkinFiz/nodejs-2021Q2-task1.git
-```
+- Git - [Download & Install Git](https://git-scm.com/downloads).
+- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package
+  manager.
 
-```
-$ cd nodejs-2021Q2-task1
-```
+## Downloading
 
 ```
-$ npm i
+git clone {repository URL}
 ```
 
-### Usage example:
-
-CLI tool accept 4 options (short alias and full name):
-
-1.  -s, --shift: a shift
-2.  -i, --input: an input file
-3.  -o, --output: an output file
-4.  -a, --action: an action encode/decode
-
-Encode input.txt to output.txt with shift 7:
+## Installing NPM modules
 
 ```
-$ node caesar.js -s 7 -i "./input.txt" -o "./output.txt" -a encode
+npm install
 ```
 
-Decode input.txt to output.txt with shift 7:
+## Running application
 
 ```
-$ node caesar.js  --shift 7 --input input.txt --output output.txt --action decode
+npm start
 ```
 
-Decode stdin to stdout with shift 7:
+## Development
+
+If you're using VSCode, you can get a better developer experience from integration with
+[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and
+[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions.
+
+### Auto-fix and format
 
 ```
-$ node caesar.js --action decode --shift 7
+npm run lint
 ```
+
+### Debugging in VSCode
+
+Press <kbd>F5</kbd> to debug.
+
+For more information, visit: https://code.visualstudio.com/docs/editor/debugging
