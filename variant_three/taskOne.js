@@ -35,3 +35,32 @@
 
 
 // Решение:
+
+function removeDuplicates(s) {
+    let n = s.length;
+    let str = "";
+    
+    if (n == 0)
+        return str;
+  
+    for (let i = 0; i < n - 1; i++) {       
+        if (s[i] != s[i + 1]) {
+            str += s[i];
+        }
+    }
+         
+    str += s[n-1];
+    
+    return str;
+}
+
+module.exports.dup = function dup(stringArray) {
+    var newArray = [];
+    
+    // Loop through array values
+    for(i = 0; i < stringArray.length; i++) {
+        let str = removeDuplicates(stringArray[i]);
+        newArray.push(str);
+    }
+    return newArray;
+}
