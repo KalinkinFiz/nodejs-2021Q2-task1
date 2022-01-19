@@ -58,7 +58,7 @@ process.on('SIGINT', _ => {
 program.storeOptionsAsProperties(false).version(pckg.version);
 
 program
-  .requiredOption('-s, --shift <value>', 'A shift')
+  .option('-s, --shift <value>', 'A shift')
   .requiredOption('-a --action <action>', 'An action dup/sortOddsOnly')
   .option('-i, --input <filename>', 'An input file')
   .option('-o --output <filename>', 'An output file')

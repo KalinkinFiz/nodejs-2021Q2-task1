@@ -6,7 +6,7 @@
 
 /*Пример*/ 
 
-//dup(["abracadabra","allottee","assessee"]) 
+//dup(["abracadabra","allottee","assessee"])
 // -> ["abracadabra","alote","asese"] 
 
 //dup(["kelless","keenness"]) 

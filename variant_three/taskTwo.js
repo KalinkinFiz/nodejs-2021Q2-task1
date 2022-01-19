@@ -23,7 +23,7 @@
 //sortArray([5, 3, 1, 8, 0]) 
 // -> [1, 3, 5, 8, 0] 
 
-//sortArray([]) 
+//sortArray([])
 // -> []
 
 
@@ -32,6 +32,10 @@
 module.exports.sortOddsOnly = function sortOddsOnly (xs) {
   var n = xs.length;
 
+  if (n == 0) {
+    return '[]';
+  }
+  
   for (var i = 0; i < n - 1; i++) {
     if (xs[i] % 2 === 1) {
       for (var j = i + 1; j < n; j++) {
@@ -45,6 +49,6 @@ module.exports.sortOddsOnly = function sortOddsOnly (xs) {
       }
     }
   }
-  
+
   return xs;
 }

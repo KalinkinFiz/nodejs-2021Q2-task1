@@ -26,17 +26,23 @@ CLI tool accept 4 options (short alias and full name):
 #### Read an array from an input.txt file by converting the array using a dup function and outputting the result to output.txt:
 
 ```
-$ [node] cmd -s '["abracadabra","allottee","assessee"]' -i "./input.txt" -o "./output.txt" -a dup
+$ [node] cmd -i "./input.txt" -o "./output.txt" -a dup
 ```
 
 #### Read an array from an input.txt file by converting the array using a sortOddsOnly function and outputting the result to output.txt:
 
 ```
-$ [node] cmd  --shift '[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]' --input input.txt --output output.txt --action sortOddsOnly
+$ [node] cmd --input input.txt --output output.txt --action sortOddsOnly
+```
+
+#### Reading an array from the console and transforming it with a dup function and outputting the result to the console:
+
+```
+$ [node] cmd --action dup
 ```
 
 #### Reading an array from the console and transforming it with a sortOddsOnly function and outputting the result to the console:
 
 ```
-$ [node] cmd --action sortOddsOnly --shift 0
+$ [node] cmd --action sortOddsOnly
 ```
