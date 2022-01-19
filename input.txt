@@ -1,1 +1,0 @@
-This is secret. Message about "_" symbol!
