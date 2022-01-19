@@ -11,8 +11,10 @@
   "scripts": {
     "start": "node -r ts-node/register ./src/server.ts",
     "start:watch": "nodemon --watch src --exec npm start --ext ts",
-    "lint": "eslint --ext .js,.ts --fix src/"
-
+    "lint": "eslint --ext .js,.ts --fix src/",
+    "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace --runInBand",
+    "test:auth": "cross-env DEBUG=rs:* TEST_MODE=auth jest --noStackTrace",
+    "doc": "./node_modules/.bin/jsdoc ./src -c ./jsdoc.json"
   },
   "keywords": [
     "rest",
