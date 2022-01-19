@@ -28,3 +28,23 @@
 
 
 // Решение:
+
+module.exports.sortOddsOnly = function sortOddsOnly (xs) {
+  var n = xs.length;
+
+  for (var i = 0; i < n - 1; i++) {
+    if (xs[i] % 2 === 1) {
+      for (var j = i + 1; j < n; j++) {
+        if (xs[j] % 2 === 1) {
+          if (xs[i] > xs[j]) {
+            var min = xs[j];
+            xs[j] = xs[i];
+            xs[i] = min;
+          }
+        }
+      }
+    }
+  }
+  
+  return xs;
+}
