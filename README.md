@@ -1,9 +1,9 @@
-## Caesar cipher CLI tool
+## Node.js basics. Variant three CLI tool (CMD tool)
 
 ## Run app
 
 ```
-$ git clone https://github.com/KalinkinFiz/nodejs-2021Q2-task1.git
+$ git clone https://github.com/EgorPavlovich/nodejs-2021Q2-task1/tree/VariantThree
 ```
 
 ```
@@ -21,22 +21,22 @@ CLI tool accept 4 options (short alias and full name):
 1.  -s, --shift: a shift
 2.  -i, --input: an input file
 3.  -o, --output: an output file
-4.  -a, --action: an action encode/decode
+4.  -a, --action: an action dup/sortOddsOnly
 
-Encode input.txt to output.txt with shift 7:
-
-```
-$ node caesar.js -s 7 -i "./input.txt" -o "./output.txt" -a encode
-```
-
-Decode input.txt to output.txt with shift 7:
+#### Read an array from an input.txt file by converting the array using a dup function and outputting the result to output.txt:
 
 ```
-$ node caesar.js  --shift 7 --input input.txt --output output.txt --action decode
+$ [node] cmd -s '["abracadabra","allottee","assessee"]' -i "./input.txt" -o "./output.txt" -a dup
 ```
 
-Decode stdin to stdout with shift 7:
+#### Read an array from an input.txt file by converting the array using a sortOddsOnly function and outputting the result to output.txt:
 
 ```
-$ node caesar.js --action decode --shift 7
+$ [node] cmd  --shift '[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]' --input input.txt --output output.txt --action sortOddsOnly
+```
+
+#### Reading an array from the console and transforming it with a sortOddsOnly function and outputting the result to the console:
+
+```
+$ [node] cmd --action sortOddsOnly --shift 0
 ```
